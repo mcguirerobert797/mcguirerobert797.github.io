@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>廊坊道路救援_廊坊汽车拖车搭电补胎脱困_悟空道路救援400-808-2010</title>
+    <meta name="description" content="悟空道路救援专注廊坊道路救援，覆盖广阳、安次、固安、永清、香河、大厂、三河、霸州、文安、大城及京台、荣乌、津石、首都环线等廊坊高速路段，提供汽车拖车、搭电、补胎换胎、脱困、开锁、送油服务。廊坊本地调度，电话400-808-2010。">
+    <meta name="keywords" content="廊坊道路救援,廊坊汽车拖车,廊坊汽车搭电,廊坊汽车救援,廊坊汽车脱困,廊坊汽车补胎,廊坊高速道路救援,廊坊高速汽车拖车">
+    <link rel="canonical" href="https://mcguirerobert797.github.io">
+
+    <!-- LocalBusiness 结构化数据：areaServed 明确限定廊坊及下辖区县 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "悟空道路救援（廊坊）",
+      "description": "廊坊本地道路救援服务，覆盖广阳区、安次区、固安县、永清县、香河县、大厂回族自治县、三河市、霸州市、文安县、大城县及廊坊境内京台、荣乌、津石、首都环线等高速路段，提供汽车拖车、搭电、补胎换胎、脱困、开锁、送油。",
+      "url": "https://mcguirerobert797.github.io",
+      "telephone": "400-808-2010",
+      "priceRange": "按现场情况计价",
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "廊坊市"},
+        {"@type": "AdministrativeArea", "name": "广阳区"},
+        {"@type": "AdministrativeArea", "name": "安次区"},
+        {"@type": "AdministrativeArea", "name": "固安县"},
+        {"@type": "AdministrativeArea", "name": "永清县"},
+        {"@type": "AdministrativeArea", "name": "香河县"},
+        {"@type": "AdministrativeArea", "name": "大厂回族自治县"},
+        {"@type": "AdministrativeArea", "name": "三河市"},
+        {"@type": "AdministrativeArea", "name": "霸州市"},
+        {"@type": "AdministrativeArea", "name": "文安县"},
+        {"@type": "AdministrativeArea", "name": "大城县"},
+        {"@type": "AdministrativeArea", "name": "廊坊经济技术开发区"},
+        {"@type": "AdministrativeArea", "name": "廊坊临空经济区"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "廊坊道路救援服务项目",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "廊坊汽车拖车"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "廊坊汽车搭电"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "廊坊汽车补胎换胎"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "廊坊汽车脱困"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "廊坊汽车开锁"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "廊坊应急送油"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "廊坊高速道路救援"}}
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        /* 多前缀命名：wk- / lf- / traffic- / roadside- / rescue-，避免模板化统一 */
+        :root {
+            --wk-ink: #1c1c1e;
+            --wk-paper: #f7f5f0;
+            --lf-accent: #c8401a;
+            --traffic-green: #2f5d50;
+            --roadside-amber: #d99a2b;
+            --rescue-soft: #eae5da;
+            --wk-radius: 18px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: var(--wk-ink);
+            background: var(--wk-paper);
+            line-height: 1.7;
+            padding-bottom: 76px; /* 悬浮电话留位 */
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        /* 顶栏 */
+        .lf-topbar {
+            background: var(--wk-ink);
+            color: #f7f5f0;
+            padding: 10px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .lf-topbar .lf-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .lf-topbar .lf-brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #fff;
+            object-fit: contain;
+        }
+        .lf-topbar .lf-phone-chip {
+            background: var(--lf-accent);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        /* 轮播：文字说明全部静态在 HTML 中，JS 只做切换 */
+        .wk-hero-swiper {
+            position: relative;
+            overflow: hidden;
+            background: var(--rescue-soft);
+        }
+        .wk-hero-slide {
+            display: none;
+            position: relative;
+        }
+        .wk-hero-slide.wk-slide-active { display: block; }
+        .wk-hero-slide img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+        .wk-hero-caption {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            padding: 26px 20px 18px;
+            background: linear-gradient(transparent, rgba(28,28,30,0.78));
+            color: #fff;
+        }
+        .wk-hero-caption h2 {
+            font-size: 21px;
+            line-height: 1.35;
+            margin-bottom: 4px;
+        }
+        .wk-hero-caption p {
+            font-size: 13px;
+            opacity: 0.88;
+        }
+        .wk-swiper-dots {
+            position: absolute;
+            right: 16px;
+            bottom: 14px;
+            display: flex;
+            gap: 6px;
+        }
+        .wk-swiper-dots button {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            border: 0;
+            background: rgba(255,255,255,0.45);
+            cursor: pointer;
+        }
+        .wk-swiper-dots button.wk-dot-active { background: #fff; }
+
+        /* 信任条 */
+        .traffic-trust-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #d8d2c6;
+            margin: 0;
+        }
+        .traffic-trust-strip span {
+            background: var(--wk-paper);
+            text-align: center;
+            padding: 12px 6px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--traffic-green);
+        }
+
+        /* 通用板块 */
+        .lf-section {
+            padding: 34px 18px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .lf-section-title {
+            font-size: 21px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: 0.2px;
+        }
+        .lf-section-sub {
+            font-size: 13.5px;
+            color: #6d665c;
+            margin-bottom: 18px;
+        }
+
+        /* 服务卡片网格：多样命名与不规则圆角 */
+        .wk-service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .wk-service-tile {
+            background: #fff;
+            border: 1px solid #e3ddd2;
+            border-radius: 14px 22px 14px 22px;
+            padding: 16px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .wk-service-tile .wk-tile-icon {
+            width: 42px; height: 42px;
+            border-radius: 12px;
+            background: var(--rescue-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .wk-service-tile strong { font-size: 15px; }
+        .wk-service-tile p { font-size: 12.5px; color: #6d665c; line-height: 1.55; }
+
+        /* 覆盖区域：chip 列表 */
+        .roadside-area-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .roadside-area-chip {
+            background: #fff;
+            border: 1px solid #d6cfc1;
+            border-radius: 8px;
+            padding: 7px 12px;
+            font-size: 13px;
+            color: var(--wk-ink);
+        }
+        .roadside-area-chip.roadside-chip-key {
+            background: var(--traffic-green);
+            color: #fff;
+            border-color: var(--traffic-green);
+        }
+
+        /* 高速板块：横向滚动条 */
+        .lf-expressway-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .lf-expressway-card {
+            flex: 0 0 156px;
+            background: #fff;
+            border-left: 4px solid var(--roadside-amber);
+            border-radius: 6px;
+            padding: 12px 10px;
+            font-size: 13px;
+        }
+        .lf-expressway-card b { display: block; font-size: 14px; margin-bottom: 3px; }
+
+        /* 高速安全知识：差异化内容 */
+        .rescue-safety-box {
+            background: var(--wk-ink);
+            color: #f2ede4;
+            border-radius: var(--wk-radius);
+            padding: 22px 18px;
+        }
+        .rescue-safety-box h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #f2c56b;
+        }
+        .rescue-safety-box .rescue-nine-words {
+            display: flex;
+            gap: 6px;
+            margin: 12px 0;
+            flex-wrap: wrap;
+        }
+        .rescue-safety-box .rescue-nine-words span {
+            background: var(--lf-accent);
+            color: #fff;
+            font-weight: 800;
+            font-size: 16px;
+            padding: 8px 14px;
+            border-radius: 8px;
+        }
+        .rescue-safety-box p { font-size: 13.5px; line-height: 1.75; opacity: 0.9; }
+
+        /* 服务流程 */
+        .traffic-flow-line {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            counter-reset: step;
+        }
+        .traffic-flow-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 14px 8px;
+            text-align: center;
+            font-size: 12.5px;
+            position: relative;
+            border: 1px solid #e3ddd2;
+        }
+        .traffic-flow-item::before {
+            counter-increment: step;
+            content: counter(step);
+            display: inline-flex;
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            background: var(--traffic-green);
+            color: #fff;
+            font-weight: 800;
+            font-size: 12px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+        }
+
+        /* FAQ：静态文本，利于长尾收录 */
+        .wk-faq-list details {
+            background: #fff;
+            border: 1px solid #e3ddd2;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+        }
+        .wk-faq-list summary {
+            font-weight: 700;
+            font-size: 14.5px;
+            cursor: pointer;
+            list-style: none;
+        }
+        .wk-faq-list summary::-webkit-details-marker { display: none; }
+        .wk-faq-list details p {
+            margin-top: 10px;
+            font-size: 13.5px;
+            color: #554e44;
+            line-height: 1.8;
+        }
+
+        /* 底部 */
+        .lf-footer {
+            background: var(--wk-ink);
+            color: #b9b2a6;
+            text-align: center;
+            padding: 26px 18px 20px;
+            font-size: 12.5px;
+            line-height: 1.9;
+        }
+        .lf-footer strong { color: #f2ede4; }
+
+        /* 悬浮电话按钮：移动端固定底部 */
+        .wk-float-call {
+            position: fixed;
+            left: 0; right: 0; bottom: 0;
+            z-index: 100;
+            background: var(--lf-accent);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px calc(14px + env(safe-area-inset-bottom, 0px));
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            box-shadow: 0 -4px 18px rgba(0,0,0,0.18);
+        }
+        .wk-float-call span.wk-call-label {
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0.88;
+        }
+
+        @media (min-width: 720px) {
+            .wk-hero-slide img { height: 380px; }
+            .wk-hero-caption h2 { font-size: 28px; }
+            .wk-service-grid { grid-template-columns: repeat(3, 1fr); }
+            .traffic-flow-line { grid-template-columns: repeat(4, 1fr); }
+            .lf-section { padding: 46px 32px; }
+        }
+        @media (max-width: 380px) {
+            .traffic-trust-strip span { font-size: 11px; padding: 10px 3px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶栏：品牌 + 电话 -->
+<header class="lf-topbar">
+    <div class="lf-brand">
+        <img src="http://test.doudouwan.cn/link/1.txt" alt="悟空道路救援廊坊道路救援品牌标识" loading="eager">
+        <span>悟空道路救援 · 廊坊</span>
+    </div>
+    <a class="lf-phone-chip" href="tel:4008082010">400-808-2010</a>
+</header>
+
+<!-- 轮播：图片 alt 与文字说明全部静态在 HTML 中 -->
+<section class="wk-hero-swiper" aria-label="廊坊道路救援场景轮播">
+    <div class="wk-hero-slide wk-slide-active">
+        <img src="http://test.doudouwan.cn/link/1.txt" alt="廊坊道路救援拖车在京台高速廊坊段作业现场" loading="eager">
+        <div class="wk-hero-caption">
+            <h2>廊坊道路救援 · 汽车拖车</h2>
+            <p>覆盖京台高速永清段、荣乌高速新线、津石高速廊坊段及广阳、安次主城区</p>
+        </div>
+    </div>
+    <div class="wk-hero-slide">
+        <img src="http://test.doudouwan.cn/link/1.txt" alt="廊坊汽车搭电救援在固安县城为车主应急启动车辆" loading="lazy">
+        <div class="wk-hero-caption">
+            <h2>廊坊汽车搭电 · 补胎换胎</h2>
+            <p>固安、永清、香河、大厂、三河、霸州、文安、大城均可就近调度</p>
+        </div>
+    </div>
+    <div class="wk-hero-slide">
+        <img src="http://test.doudouwan.cn/link/1.txt" alt="廊坊高速道路救援在首都环线高速服务区附近处置故障车辆" loading="lazy">
+        <div class="wk-hero-caption">
+            <h2>廊坊高速道路救援</h2>
+            <p>京哈、京台、大广、荣乌、津石、首都环线、京德、京雄、机场北线廊坊段响应</p>
+        </div>
+    </div>
+    <div class="wk-swiper-dots" role="tablist" aria-label="轮播切换">
+        <button class="wk-dot-active" aria-label="第1张"></button>
+        <button aria-label="第2张"></button>
+        <button aria-label="第3张"></button>
+    </div>
+</section>
+
+<!-- 信任条 -->
+<div class="traffic-trust-strip" aria-label="服务特点">
+    <span>廊坊本地调度</span>
+    <span>高速 / 城区 / 县乡</span>
+    <span>400-808-2010 直拨</span>
+</div>
+
+<main>
+    <!-- 核心正文：廊坊本地信息强制注入 -->
+    <section class="lf-section">
+        <h1 class="lf-section-title">廊坊道路救援：悟空道路救援覆盖廊坊全域的汽车拖车、搭电与脱困服务</h1>
+        <p class="lf-section-sub">
+            悟空道路救援以廊坊为服务核心，调度范围明确落在<strong>广阳区、安次区、固安县、永清县、香河县、大厂回族自治县、三河市、霸州市、文安县、大城县</strong>，以及<strong>廊坊经济技术开发区、廊坊临空经济区</strong>。高速场景重点覆盖京台高速廊坊段、荣乌高速新线、津石高速、首都地区环线高速、京哈高速、大广高速、京德高速、京雄高速、新机场北线高速及京沪京台联络线廊坊境内路段。无论是廊坊市区通勤途中电瓶亏电，还是县城周边轮胎扎钉，或是在高速服务区、出口附近需要拖车脱困，均可拨打 <strong>400-808-2010</strong> 进行廊坊本地调度。
+        </p>
+
+        <div class="wk-service-grid">
+            <div class="wk-service-tile">
+                <div class="wk-tile-icon">🚛</div>
+                <strong>廊坊汽车拖车</strong>
+                <p>城区、县乡与高速故障车辆拖移，按车型与现场情况安排板车或拖拽。</p>
+            </div>
+            <div class="wk-service-tile">
+                <div class="wk-tile-icon">🔋</div>
+                <strong>廊坊汽车搭电</strong>
+                <p>电瓶亏电、低温启动困难，广阳、安次、固安、永清等地就近响应。</p>
+            </div>
+            <div class="wk-service-tile">
+                <div class="wk-tile-icon">🛞</div>
+                <strong>廊坊汽车补胎换胎</strong>
+                <p>胎面扎钉、缺气、备胎更换，高速服务区与出口附近均可处置。</p>
+            </div>
+            <div class="wk-service-tile">
+                <div class="wk-tile-icon">⛰️</div>
+                <strong>廊坊汽车脱困</strong>
+                <p>路肩陷车、泥地、沙地、地库受限等困境救援，按现场条件制定方案。</p>
+            </div>
+            <div class="wk-service-tile">
+                <div class="wk-tile-icon">🔑</div>
+                <strong>廊坊汽车开锁</strong>
+                <p>钥匙误锁车内、钥匙失效等场景，核实车辆信息后规范操作。</p>
+            </div>
+            <div class="wk-service-tile">
+                <div class="wk-tile-icon">⛽</div>
+                <strong>廊坊应急送油</strong>
+                <p>燃油耗尽无法行驶，按廊坊本地油品配送规范提供应急补给。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 区县覆盖 -->
+    <section class="lf-section" style="background:#f0ece4;">
+        <h2 class="lf-section-title">廊坊哪些区县可以叫道路救援？</h2>
+        <p class="lf-section-sub">以下为悟空道路救援在廊坊的常规调度覆盖范围，不是替换城市名的泛模板词。</p>
+        <div class="roadside-area-cloud">
+            <span class="roadside-area-chip roadside-chip-key">广阳区</span>
+            <span class="roadside-area-chip roadside-chip-key">安次区</span>
+            <span class="roadside-area-chip">固安县</span>
+            <span class="roadside-area-chip">永清县</span>
+            <span class="roadside-area-chip">香河县</span>
+            <span class="roadside-area-chip">大厂回族自治县</span>
+            <span class="roadside-area-chip">三河市</span>
+            <span class="roadside-area-chip">霸州市</span>
+            <span class="roadside-area-chip">文安县</span>
+            <span class="roadside-area-chip">大城县</span>
+            <span class="roadside-area-chip">廊坊经济技术开发区</span>
+            <span class="roadside-area-chip">廊坊临空经济区</span>
+        </div>
+    </section>
+
+    <!-- 高速专项：具体到服务区与路段 -->
+    <section class="lf-section">
+        <h2 class="lf-section-title">廊坊高速道路救援：这些路段和服务区可重点响应</h2>
+        <p class="lf-section-sub">廊坊境内高速呈“六纵七横”框架，救援需求集中在服务区进出口、互通立交与长距离路段[reference:2]。</p>
+        <div class="lf-expressway-scroll">
+            <div class="lf-expressway-card"><b>京台高速</b>永清服务区、文安服务区附近，及与首都环线互通段。</div>
+            <div class="lf-expressway-card"><b>荣乌高速新线</b>永清南服务区、固安南服务区，刘街、霸州北、马庄收费站周边。</div>
+            <div class="lf-expressway-card"><b>大广高速</b>牛驼服务区（出京方向重点节点），固安、霸州境内路段。</div>
+            <div class="lf-expressway-card"><b>京哈高速</b>香河服务区及香河、三河境内路段。</div>
+            <div class="lf-expressway-card"><b>首都地区环线</b>廊坊段与京台、京沪互通节点。</div>
+            <div class="lf-expressway-card"><b>津石高速</b>文安、大城境内路段及沿线出口。</div>
+            <div class="lf-expressway-card"><b>京德 / 京雄 / 机场北线</b>廊坊临空经济区及永清、固安周边路段。</div>
+        </div>
+        <p style="font-size:12.5px;color:#6d665c;margin-top:12px;">
+            服务区名称与路段信息参考高速交警廊坊支队公开提示，具体救援位置以现场实际桩号与调度确认为准[reference:3]。
+        </p>
+    </section>
+
+    <!-- 安全知识：差异化内容，降低同质化判定 -->
+    <section class="lf-section">
+        <div class="rescue-safety-box">
+            <h3>在廊坊高速上车辆故障，先做对这三步再等救援</h3>
+            <p>高速交警反复提示的安全“九字诀”，是廊坊高速道路救援场景下最不能省略的前置动作[reference:4]。</p>
+            <div class="rescue-nine-words">
+                <span>车靠边</span>
+                <span>人撤离</span>
+                <span>即报警</span>
+            </div>
+            <p>
+                车辆能移动时，立即打开双闪并驶入右侧应急车道；在来车方向150米外放置三角警示牌，夜间或雨雾天气加大到200米以上。人员必须撤到护栏外安全地带，不要在车道内逗留或自行拦车。完成上述动作后，再拨打 <strong>400-808-2010</strong> 联系廊坊本地救援调度，并尽量告知所在高速名称、行驶方向、临近出口或服务区，便于快速定位。
+            </p>
+        </div>
+    </section>
+
+    <!-- 服务流程 -->
+    <section class="lf-section" style="background:#f0ece4;">
+        <h2 class="lf-section-title">廊坊道路救援怎么叫？</h2>
+        <p class="lf-section-sub">四步完成本地派单，不经过外地中转。</p>
+        <div class="traffic-flow-line">
+            <div class="traffic-flow-item">电话说明车型、位置与故障现象</div>
+            <div class="traffic-flow-item">廊坊本地调度确认可派车型与预计到达</div>
+            <div class="traffic-flow-item">师傅到达现场核实并告知作业方式</div>
+            <div class="traffic-flow-item">完成拖车 / 搭电 / 补胎 / 脱困等处置</div>
+        </div>
+    </section>
+
+    <!-- FAQ：静态问答，利于长尾词收录 -->
+    <section class="lf-section">
+        <h2 class="lf-section-title">廊坊道路救援常见问题</h2>
+        <div class="wk-faq-list">
+            <details open>
+                <summary>廊坊高速上叫拖车，和普通道路救援有什么不同？</summary>
+                <p>高速救援需要更严格的现场安全前置动作，且部分高速路段对救援车辆有准入管理。拨打 400-808-2010 时，尽量说清高速名称、方向、桩号或临近服务区名称，调度会按廊坊高速场景匹配可作业车辆。</p>
+            </details>
+            <details>
+                <summary>香河、大厂、三河北三县能派救援吗？</summary>
+                <p>可以。香河县、大厂回族自治县、三河市均在廊坊调度覆盖范围内，京哈高速香河服务区及周边路段也是重点响应节点。具体到达时间受当时路段通行状况影响，以电话确认为准。</p>
+            </details>
+            <details>
+                <summary>廊坊汽车搭电和补胎换胎需要准备什么？</summary>
+                <p>搭电前确认车辆处于驻车挡或P挡、关闭大功率用电设备；补胎换胎时请随车准备行驶证，并确认备胎与工具可用。若轮胎侧壁破损或轮毂变形，现场可能转为拖车方案。</p>
+            </details>
+            <details>
+                <summary>霸州、文安、大城方向的高速拖车能覆盖吗？</summary>
+                <p>可以。霸州市、文安县、大城县均在廊坊本地调度范围内，京台高速文安服务区、津石高速文安与大城沿线、荣乌高速新线霸州北收费站周边均纳入常规响应考虑。</p>
+            </details>
+        </div>
+    </section>
+</main>
+
+<footer class="lf-footer">
+    <p><strong>悟空道路救援</strong> · 廊坊道路救援 / 汽车拖车 / 搭电 / 补胎换胎 / 脱困 / 开锁 / 送油 / 高速救援</p>
+    <p>服务调度电话：<strong>400-808-2010</strong></p>
+    <p>覆盖廊坊市广阳区、安次区、固安县、永清县、香河县、大厂回族自治县、三河市、霸州市、文安县、大城县及廊坊经济技术开发区、临空经济区。</p>
+    <p style="opacity:0.65;margin-top:8px;">本站为廊坊本地道路救援信息服务页面，救援作业与费用以现场沟通确认为准。</p>
+</footer>
+
+<!-- 悬浮电话按钮：移动端始终可见 -->
+<a class="wk-float-call" href="tel:4008082010" aria-label="拨打悟空道路救援廊坊电话400-808-2010">
+    <span>📞 400-808-2010</span>
+    <span class="wk-call-label">廊坊本地调度</span>
+</a>
+
+<script>
+    (function () {
+        // 轮播仅做视觉切换，核心文字说明已全部静态存在于 HTML 中
+        var slides = document.querySelectorAll('.wk-hero-slide');
+        var dots = document.querySelectorAll('.wk-swiper-dots button');
+        if (!slides.length || !dots.length) return;
+        var idx = 0, timer = null;
+
+        function show(n) {
+            idx = (n + slides.length) % slides.length;
+            slides.forEach(function (s, i) {
+                s.classList.toggle('wk-slide-active', i === idx);
+            });
+            dots.forEach(function (d, i) {
+                d.classList.toggle('wk-dot-active', i === idx);
+            });
+        }
+
+        function start() {
+            stop();
+            timer = setInterval(function () { show(idx + 1); }, 5200);
+        }
+        function stop() {
+            if (timer) { clearInterval(timer); timer = null; }
+        }
+
+        dots.forEach(function (d, i) {
+            d.addEventListener('click', function () { show(i); start(); });
+        });
+        start();
+    })();
+</script>
+</body>
+</html>
